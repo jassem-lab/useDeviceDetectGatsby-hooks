@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      {isMobile && (
+      {isMobile ? (
         <div>
           <h1>Hi people</h1>
           <p>Welcome to your new Gatsby site from mobile device.</p>
@@ -28,7 +28,7 @@ const IndexPage = () => {
             <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
           </p>
         </div>
-      )}
+      ) : <div> <h1>Hi people from Desktop device</h1> </div>}
     </Layout>
   )
 }
